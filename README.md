@@ -4,8 +4,8 @@
 
 Python · FastAPI · LangGraph · SQL · RAG · GigaChat · Streamlit · Docker · pytest
 
-An independent portfolio project by **Jaber Mobarak**, inspired by public Sber AI engineering vacancies.
-All banking data and policies are fictional. This is not a Sber product or an implementation of its internal architecture.
+An independent portfolio project by **Jaber Mobarak**, inspired by AI engineering vacancies.
+All banking data and policies are fictional. This is not a real bank product or an implementation of any internal architecture.
 
 ## What it does
 
