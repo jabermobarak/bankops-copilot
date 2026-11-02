@@ -1,0 +1,16 @@
+{"query":"minimum liquidity buffer", "as_of":"2026-10-30", "expected":"liquidity-v2"}
+{"query":"minimum closing cash", "as_of":"2026-10-30", "expected":"liquidity-v2"}
+{"query":"liquidity escalation treasury supervisor", "as_of":"2026-10-30", "expected":"liquidity-v2"}
+{"query":"буфер ликвидности", "as_of":"2026-10-30", "expected":"liquidity-v2"}
+{"query":"минимальный буфер", "as_of":"2026-09-30", "expected":"liquidity-v1"}
+{"query":"historical cash liquidity buffer", "as_of":"2026-09-30", "expected":"liquidity-v1"}
+{"query":"single counterparty exposure concentration", "as_of":"2026-10-30", "expected":"concentration-v1"}
+{"query":"доля контрагента", "as_of":"2026-10-30", "expected":"concentration-v1"}
+{"query":"increase scheduled outflow stress", "as_of":"2026-10-30", "expected":"stress-v1"}
+{"query":"стресс рост выплат", "as_of":"2026-10-30", "expected":"stress-v1"}
+{"query":"closing cash inflows minus outflows", "as_of":"2026-10-30", "expected":"forecast-v1"}
+{"query":"прогноз по графику", "as_of":"2026-10-30", "expected":"forecast-v1"}
+{"query":"read only analyst access arbitrary SQL", "as_of":"2026-10-30", "expected":"access-v1"}
+{"query":"snapshot absent stale missing data", "as_of":"2026-10-30", "expected":"data-quality-v1"}
+{"query":"personal identifiers credentials privacy", "as_of":"2026-10-30", "expected":"privacy-v1"}
+{"query":"application audit logs prompts", "as_of":"2026-10-30", "expected":"privacy-v1"}

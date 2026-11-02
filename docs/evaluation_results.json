@@ -1,0 +1,437 @@
+{
+  "created_utc": "2026-11-01T20:17:07.010824+00:00",
+  "python": "3.12.14",
+  "provider": "extractive",
+  "retriever": "lexical",
+  "data_sha256": "c2c9e43d1ce923c2b21fd267b5a3feb20648bbbcbb0b378f54df7e1eb7b90058",
+  "scope": "Authored synthetic regression fixture; no live LLM, bank data or held-out benchmark",
+  "retrieval_queries": 16,
+  "retrieval": {
+    "bm25": {
+      "hit_at_1": 1.0,
+      "recall_at_3": 1.0,
+      "mrr_at_3": 1.0,
+      "cases": [
+        {
+          "query": "minimum liquidity buffer",
+          "as_of": "2026-10-30",
+          "expected": "liquidity-v2",
+          "retrieved": [
+            "liquidity-v2"
+          ],
+          "rank": 1
+        },
+        {
+          "query": "minimum closing cash",
+          "as_of": "2026-10-30",
+          "expected": "liquidity-v2",
+          "retrieved": [
+            "liquidity-v2",
+            "forecast-v1",
+            "stress-v1"
+          ],
+          "rank": 1
+        },
+        {
+          "query": "liquidity escalation treasury supervisor",
+          "as_of": "2026-10-30",
+          "expected": "liquidity-v2",
+          "retrieved": [
+            "liquidity-v2"
+          ],
+          "rank": 1
+        },
+        {
+          "query": "буфер ликвидности",
+          "as_of": "2026-10-30",
+          "expected": "liquidity-v2",
+          "retrieved": [
+            "liquidity-v2"
+          ],
+          "rank": 1
+        },
+        {
+          "query": "минимальный буфер",
+          "as_of": "2026-09-30",
+          "expected": "liquidity-v1",
+          "retrieved": [
+            "liquidity-v1"
+          ],
+          "rank": 1
+        },
+        {
+          "query": "historical cash liquidity buffer",
+          "as_of": "2026-09-30",
+          "expected": "liquidity-v1",
+          "retrieved": [
+            "liquidity-v1",
+            "forecast-v1",
+            "stress-v1"
+          ],
+          "rank": 1
+        },
+        {
+          "query": "single counterparty exposure concentration",
+          "as_of": "2026-10-30",
+          "expected": "concentration-v1",
+          "retrieved": [
+            "concentration-v1"
+          ],
+          "rank": 1
+        },
+        {
+          "query": "доля контрагента",
+          "as_of": "2026-10-30",
+          "expected": "concentration-v1",
+          "retrieved": [
+            "concentration-v1"
+          ],
+          "rank": 1
+        },
+        {
+          "query": "increase scheduled outflow stress",
+          "as_of": "2026-10-30",
+          "expected": "stress-v1",
+          "retrieved": [
+            "stress-v1",
+            "forecast-v1",
+            "concentration-v1"
+          ],
+          "rank": 1
+        },
+        {
+          "query": "стресс рост выплат",
+          "as_of": "2026-10-30",
+          "expected": "stress-v1",
+          "retrieved": [
+            "stress-v1"
+          ],
+          "rank": 1
+        },
+        {
+          "query": "closing cash inflows minus outflows",
+          "as_of": "2026-10-30",
+          "expected": "forecast-v1",
+          "retrieved": [
+            "forecast-v1",
+            "stress-v1",
+            "liquidity-v2"
+          ],
+          "rank": 1
+        },
+        {
+          "query": "прогноз по графику",
+          "as_of": "2026-10-30",
+          "expected": "forecast-v1",
+          "retrieved": [
+            "forecast-v1"
+          ],
+          "rank": 1
+        },
+        {
+          "query": "read only analyst access arbitrary SQL",
+          "as_of": "2026-10-30",
+          "expected": "access-v1",
+          "retrieved": [
+            "access-v1",
+            "privacy-v1",
+            "forecast-v1"
+          ],
+          "rank": 1
+        },
+        {
+          "query": "snapshot absent stale missing data",
+          "as_of": "2026-10-30",
+          "expected": "data-quality-v1",
+          "retrieved": [
+            "data-quality-v1",
+            "forecast-v1",
+            "privacy-v1"
+          ],
+          "rank": 1
+        },
+        {
+          "query": "personal identifiers credentials privacy",
+          "as_of": "2026-10-30",
+          "expected": "privacy-v1",
+          "retrieved": [
+            "privacy-v1"
+          ],
+          "rank": 1
+        },
+        {
+          "query": "application audit logs prompts",
+          "as_of": "2026-10-30",
+          "expected": "privacy-v1",
+          "retrieved": [
+            "privacy-v1"
+          ],
+          "rank": 1
+        }
+      ]
+    },
+    "hybrid": {
+      "hit_at_1": 1.0,
+      "recall_at_3": 1.0,
+      "mrr_at_3": 1.0,
+      "cases": [
+        {
+          "query": "minimum liquidity buffer",
+          "as_of": "2026-10-30",
+          "expected": "liquidity-v2",
+          "retrieved": [
+            "liquidity-v2"
+          ],
+          "rank": 1
+        },
+        {
+          "query": "minimum closing cash",
+          "as_of": "2026-10-30",
+          "expected": "liquidity-v2",
+          "retrieved": [
+            "liquidity-v2",
+            "forecast-v1",
+            "stress-v1"
+          ],
+          "rank": 1
+        },
+        {
+          "query": "liquidity escalation treasury supervisor",
+          "as_of": "2026-10-30",
+          "expected": "liquidity-v2",
+          "retrieved": [
+            "liquidity-v2"
+          ],
+          "rank": 1
+        },
+        {
+          "query": "буфер ликвидности",
+          "as_of": "2026-10-30",
+          "expected": "liquidity-v2",
+          "retrieved": [
+            "liquidity-v2"
+          ],
+          "rank": 1
+        },
+        {
+          "query": "минимальный буфер",
+          "as_of": "2026-09-30",
+          "expected": "liquidity-v1",
+          "retrieved": [
+            "liquidity-v1"
+          ],
+          "rank": 1
+        },
+        {
+          "query": "historical cash liquidity buffer",
+          "as_of": "2026-09-30",
+          "expected": "liquidity-v1",
+          "retrieved": [
+            "liquidity-v1",
+            "forecast-v1",
+            "stress-v1"
+          ],
+          "rank": 1
+        },
+        {
+          "query": "single counterparty exposure concentration",
+          "as_of": "2026-10-30",
+          "expected": "concentration-v1",
+          "retrieved": [
+            "concentration-v1"
+          ],
+          "rank": 1
+        },
+        {
+          "query": "доля контрагента",
+          "as_of": "2026-10-30",
+          "expected": "concentration-v1",
+          "retrieved": [
+            "concentration-v1"
+          ],
+          "rank": 1
+        },
+        {
+          "query": "increase scheduled outflow stress",
+          "as_of": "2026-10-30",
+          "expected": "stress-v1",
+          "retrieved": [
+            "stress-v1",
+            "forecast-v1",
+            "concentration-v1"
+          ],
+          "rank": 1
+        },
+        {
+          "query": "стресс рост выплат",
+          "as_of": "2026-10-30",
+          "expected": "stress-v1",
+          "retrieved": [
+            "stress-v1"
+          ],
+          "rank": 1
+        },
+        {
+          "query": "closing cash inflows minus outflows",
+          "as_of": "2026-10-30",
+          "expected": "forecast-v1",
+          "retrieved": [
+            "forecast-v1",
+            "stress-v1",
+            "liquidity-v2"
+          ],
+          "rank": 1
+        },
+        {
+          "query": "прогноз по графику",
+          "as_of": "2026-10-30",
+          "expected": "forecast-v1",
+          "retrieved": [
+            "forecast-v1"
+          ],
+          "rank": 1
+        },
+        {
+          "query": "read only analyst access arbitrary SQL",
+          "as_of": "2026-10-30",
+          "expected": "access-v1",
+          "retrieved": [
+            "access-v1",
+            "privacy-v1",
+            "forecast-v1"
+          ],
+          "rank": 1
+        },
+        {
+          "query": "snapshot absent stale missing data",
+          "as_of": "2026-10-30",
+          "expected": "data-quality-v1",
+          "retrieved": [
+            "data-quality-v1",
+            "forecast-v1",
+            "privacy-v1"
+          ],
+          "rank": 1
+        },
+        {
+          "query": "personal identifiers credentials privacy",
+          "as_of": "2026-10-30",
+          "expected": "privacy-v1",
+          "retrieved": [
+            "privacy-v1"
+          ],
+          "rank": 1
+        },
+        {
+          "query": "application audit logs prompts",
+          "as_of": "2026-10-30",
+          "expected": "privacy-v1",
+          "retrieved": [
+            "privacy-v1"
+          ],
+          "rank": 1
+        }
+      ]
+    }
+  },
+  "tasks_passed": 16,
+  "tasks_total": 16,
+  "tasks": [
+    {
+      "id": "cash",
+      "passed": true,
+      "failures": [],
+      "elapsed_ms": 14.09
+    },
+    {
+      "id": "forecast",
+      "passed": true,
+      "failures": [],
+      "elapsed_ms": 5.82
+    },
+    {
+      "id": "one-day",
+      "passed": true,
+      "failures": [],
+      "elapsed_ms": 5.04
+    },
+    {
+      "id": "stress-20",
+      "passed": true,
+      "failures": [],
+      "elapsed_ms": 5.24
+    },
+    {
+      "id": "stress-zero",
+      "passed": true,
+      "failures": [],
+      "elapsed_ms": 4.69
+    },
+    {
+      "id": "exposure",
+      "passed": true,
+      "failures": [],
+      "elapsed_ms": 4.54
+    },
+    {
+      "id": "ru-cash",
+      "passed": true,
+      "failures": [],
+      "elapsed_ms": 5.2
+    },
+    {
+      "id": "ru-policy",
+      "passed": true,
+      "failures": [],
+      "elapsed_ms": 4.01
+    },
+    {
+      "id": "historical-policy",
+      "passed": true,
+      "failures": [],
+      "elapsed_ms": 5.49
+    },
+    {
+      "id": "missing-date",
+      "passed": true,
+      "failures": [],
+      "elapsed_ms": 3.35
+    },
+    {
+      "id": "unknown-topic",
+      "passed": true,
+      "failures": [],
+      "elapsed_ms": 4.19
+    },
+    {
+      "id": "no-percentage",
+      "passed": true,
+      "failures": [],
+      "elapsed_ms": 2.23
+    },
+    {
+      "id": "unsupported-stress",
+      "passed": true,
+      "failures": [],
+      "elapsed_ms": 1.63
+    },
+    {
+      "id": "injection",
+      "passed": true,
+      "failures": [],
+      "elapsed_ms": 0.81
+    },
+    {
+      "id": "mutation",
+      "passed": true,
+      "failures": [],
+      "elapsed_ms": 0.76
+    },
+    {
+      "id": "payment",
+      "passed": true,
+      "failures": [],
+      "elapsed_ms": 0.76
+    }
+  ]
+}

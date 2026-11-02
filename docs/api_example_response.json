@@ -1,0 +1,138 @@
+{
+  "request_id": "d7b9a88d-f0f7-4df8-871c-57fd07b458b7",
+  "task": "stress",
+  "status": "answered",
+  "answer": "As of 2026-10-30, opening cash is 26,000,000.00 RUB. Over 7 days with outflows increased by 20%, minimum closing cash is 5,800,000.00 RUB. Required buffer: 10,000,000.00 RUB. First breach: 2026-11-03. [liquidity-v2] Escalate to the treasury supervisor for review; no transaction is executed.",
+  "narrative": null,
+  "provider": "extractive",
+  "retriever": "lexical",
+  "metrics": {
+    "as_of": "2026-10-30",
+    "currency": "RUB",
+    "horizon_days": 7,
+    "opening_cash_rub": 26000000.0,
+    "closing_cash_rub": 5800000.0,
+    "minimum_cash_rub": 5800000.0,
+    "stress_pct": 20,
+    "inflows_rub": 29000000.0,
+    "outflows_rub": 49200000.0,
+    "buffer_rub": 10000000,
+    "breached": true,
+    "first_breach_date": "2026-11-03"
+  },
+  "rows": [
+    {
+      "date": "2026-10-31",
+      "inflow_rub": 5000000.0,
+      "outflow_rub": 4800000.0,
+      "closing_cash_rub": 26200000.0
+    },
+    {
+      "date": "2026-11-01",
+      "inflow_rub": 3000000.0,
+      "outflow_rub": 10800000.0,
+      "closing_cash_rub": 18400000.0
+    },
+    {
+      "date": "2026-11-02",
+      "inflow_rub": 4000000.0,
+      "outflow_rub": 6000000.0,
+      "closing_cash_rub": 16400000.0
+    },
+    {
+      "date": "2026-11-03",
+      "inflow_rub": 2000000.0,
+      "outflow_rub": 12000000.0,
+      "closing_cash_rub": 6400000.0
+    },
+    {
+      "date": "2026-11-04",
+      "inflow_rub": 6000000.0,
+      "outflow_rub": 3600000.0,
+      "closing_cash_rub": 8800000.0
+    },
+    {
+      "date": "2026-11-05",
+      "inflow_rub": 4000000.0,
+      "outflow_rub": 4800000.0,
+      "closing_cash_rub": 8000000.0
+    },
+    {
+      "date": "2026-11-06",
+      "inflow_rub": 5000000.0,
+      "outflow_rub": 7200000.0,
+      "closing_cash_rub": 5800000.0
+    }
+  ],
+  "sources": [
+    {
+      "id": "liquidity-v2",
+      "title": "Liquidity buffer and escalation",
+      "effective_from": "2026-10-01",
+      "effective_to": null,
+      "text": "Fictional policy. Not a Sber rule or regulatory requirement.\nFrom 2026-10-01, minimum daily closing cash must be at least 10,000,000 RUB.\nThe liquidity buffer applies to each day in the selected schedule horizon, not only the last day.\nA value strictly below the buffer is a breach; equality is allowed.\nIf any day breaches the buffer, escalate to the treasury supervisor for review on the same business day.\nThe assistant cannot move money or automatically remedy the breach.\nС 2026-10-01 минимальный буфер ликвидности: 10 000 000 RUB на конец каждого дня.\nЕсли остаток ниже буфера, нужна проверка руководителя казначейства в тот же рабочий день.\n",
+      "score": 0.032522
+    },
+    {
+      "id": "stress-v1",
+      "title": "Outflow stress scenario",
+      "effective_from": "2026-01-01",
+      "effective_to": null,
+      "text": "Fictional stress-testing procedure. Standard example: increase every scheduled outflow by 20% over seven days.\nKeep inflows and opening cash unchanged. Apply the factor to each day's aggregate outflow;\nround half up to integer kopecks before rolling the balance forward.\nThe user can select an integer outflow increase from 0% to 100% and a horizon of 1 to 30 days.\nThis is a deterministic what-if scenario, not a probability estimate or a learned prediction.\nСтресс: рост выплат на 20%, поступления не меняются. Срок примера: 7 дней.\n",
+      "score": 0.032522
+    }
+  ],
+  "trace": [
+    {
+      "node": "guard",
+      "passed": true
+    },
+    {
+      "node": "plan",
+      "task": "stress",
+      "planner": "bounded_rules",
+      "as_of": "2026-10-30",
+      "horizon_days": 7
+    },
+    {
+      "node": "execute",
+      "tool": "stress",
+      "queries": [
+        {
+          "template": "SELECT SUM(cash_minor) AS cash FROM balances WHERE as_of = ?",
+          "parameters": [
+            "2026-10-30"
+          ]
+        },
+        {
+          "template": "SELECT due_date,\n SUM(CASE WHEN direction='in' THEN amount_minor ELSE 0 END) AS inflow_minor,\n SUM(CASE WHEN direction='out' THEN amount_minor ELSE 0 END) AS outflow_minor\n FROM cashflows WHERE as_of = ? AND due_date > ? AND due_date <= ?\n GROUP BY due_date ORDER BY due_date",
+          "parameters": [
+            "2026-10-30",
+            "2026-10-30",
+            "2026-11-06"
+          ]
+        }
+      ]
+    },
+    {
+      "node": "retrieve",
+      "mode": "lexical",
+      "source_ids": [
+        "liquidity-v2",
+        "stress-v1"
+      ],
+      "temporal_filter": "2026-10-30"
+    },
+    {
+      "node": "compose",
+      "result": "evidence_attached"
+    },
+    {
+      "node": "narrate",
+      "provider": "extractive",
+      "generated": false
+    }
+  ],
+  "warnings": [],
+  "elapsed_ms": 9.53
+}

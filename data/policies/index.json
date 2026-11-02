@@ -1,0 +1,10 @@
+[
+  {"id":"liquidity-v1", "title":"Historical liquidity buffer", "effective_from":"2026-01-01", "effective_to":"2026-09-30", "file":"liquidity-v1.md", "rules":{"buffer_rub":8000000}},
+  {"id":"liquidity-v2", "title":"Liquidity buffer and escalation", "effective_from":"2026-10-01", "effective_to":null, "file":"liquidity-v2.md", "rules":{"buffer_rub":10000000}},
+  {"id":"concentration-v1", "title":"Counterparty concentration limit", "effective_from":"2026-01-01", "effective_to":null, "file":"concentration.md", "rules":{"max_share_pct":25}},
+  {"id":"stress-v1", "title":"Outflow stress scenario", "effective_from":"2026-01-01", "effective_to":null, "file":"stress.md", "rules":{}},
+  {"id":"forecast-v1", "title":"Scheduled cashflow projection", "effective_from":"2026-01-01", "effective_to":null, "file":"forecast.md", "rules":{}},
+  {"id":"access-v1", "title":"Read-only analyst access", "effective_from":"2026-01-01", "effective_to":null, "file":"access.md", "rules":{}},
+  {"id":"data-quality-v1", "title":"Missing data and stale snapshots", "effective_from":"2026-01-01", "effective_to":null, "file":"data-quality.md", "rules":{}},
+  {"id":"privacy-v1", "title":"Data minimization", "effective_from":"2026-01-01", "effective_to":null, "file":"privacy.md", "rules":{}}
+]
