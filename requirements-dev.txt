@@ -1,0 +1,9 @@
+-r requirements.txt
+grpcio==1.85.1
+iniconfig==2.3.1
+pluggy==1.7.0
+portalocker==4.4.2
+pygments==2.21.0
+pytest==9.2.0
+qdrant-client==1.20.0
+ruff==0.17.3

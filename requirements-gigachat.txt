@@ -1,0 +1,4 @@
+-r requirements.txt
+gigachat==0.2.4
+langchain-gigachat==0.5.1
+pydantic-settings==2.16.2
